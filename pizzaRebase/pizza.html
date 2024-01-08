@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="Tiko-Teemu">
+    <meta name="keywords" content="html5, wpd, jamk, tiko, recipes">
+    <meta name="description" content="Exercises for the WPD course.">
+    <title>Reseptejä lol</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="container">
+
+        <header>
+            <img src="pics/jamk_2022.png" alt="JAMK" style="width:169px;height:83px">
+            <h1>Recipes</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><span class="sel">Recipes</span></li>
+                <li><a href="#">Pizza Online</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <form id="login_form" action="http://localhost:3000/login" method="POST">
+                <label id="email_label" for="email">Email</label>
+                <input placeholder="Sähköposti" id="email" type="email" name="email">
+                <label id="pw_label" for="password">Password</label>
+                <input placeholder="Salasana" id="password" type="password" name="password">
+                <input id="login_submit" type="submit" value="Login">
+            </form>
+        </nav>
+
+        <aside>
+            <img src="pics/compsale.jpg" alt="Computer Shop">
+
+            <img src="pics/pertsanpub.jpg" alt="Pertsan Pub">
+
+            <img src="pics/clickhere.jpg" alt="Want your ad here?">
+        </aside>
+
+        <main>
+            <form id="pizza_form" action="http://localhost:3000/pizza-form" method="POST">
+                <div id="order-form-grid">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name">
+                    <label for="tel">Phone</label>
+                    <input id="tel" type="tel" name="phonenumber">
+                    <label for="address">Address</label>
+                    <input id="address" type="text" name="address">
+                    <label for="pizza_type">Type</label>
+                    <div>
+                        <input type="radio" name="pizza_type" id="normal" value="normal">
+                        <label for="normal">Normal</label>
+                        <input type="radio" name="pizza_type" id="pan" value="pan">
+                        <label for="pan">Pan</label>
+                    </div>
+                    <label for="size">Size</label>
+                    <select name="size" id="size">
+                        <option selected="selected" value="noselection">Select</option>
+                        <option value="mini">Mini</option>
+                        <option value="normal">Normal</option>
+                        <option value="giant">Giant</option>
+                    </select>
+
+                    <label for="stuffings">Stuffings</label>
+                    <div>
+                        <input type="checkbox" name="stuffing" id="s1" value="s1" />
+                        <label for="s1">Ham</label>
+                        <input type="checkbox" name="stuffing" id="s2" value="s2" />
+                        <label for="s2">Onion</label>
+                        <input type="checkbox" name="stuffing" id="s3" value="s3" />
+                        <label for="s3">Chili</label>
+                        <input type="checkbox" name="stuffing" id="s4" value="s4" />
+                        <label for="s4">Pork</label>
+                        <input type="checkbox" name="stuffing" id="s5" value="s5" />
+                        <label for="s5">Pepperoni</label>
+                        <input type="checkbox" name="stuffing" id="s6" value="s6" />
+                        <label for="s6">Pineapple</label>
+                    </div>
+                    <label for="mixings">Mixings</label>
+                    <select name="mixings" id="mixings" size="4" multiple="multiple">
+                        <option value="chips">Chips</option>
+                        <option value="salad">Salad</option>
+                        <option value="cola">Cola</option>
+                        <option value="orange_juice">Orange Juice</option>
+                    </select>
+                    <label for="comments">Comments</label>
+                    <textarea name="comments" id="comments" cols="40" rows="10"></textarea>
+                </div>
+                <input type="submit" value="Order">
+                <input type="reset" value="Clear">
+
+            </form>
+        </main>
+
+        <footer>All Recipes and related images taken from <a
+                href="http://www.nibbledish.com/">http://www.nibbledish.com/</a>, written by Paula,
+            Creative Commons Licensed.</footer>
+
+    </div>
+
+
+
+</body>
+
+</html>
